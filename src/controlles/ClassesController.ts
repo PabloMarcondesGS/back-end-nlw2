@@ -21,7 +21,8 @@ export default class ClassesController {
 
         const timeInminutes = convertHourToMinutes(filters.time as string);
 
-        console.log(timeInminutes);
+        const classes = await db('classes')
+        .where
 
         return response.send();
     }
