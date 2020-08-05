@@ -1,4 +1,5 @@
 import express from 'express';
+import routes from './routes';
 
 const app = express();
 //http:localhost:3333   para acessar a aplicação
@@ -14,14 +15,9 @@ const app = express();
 // Query parms: paginação, filtros, ordenação
 
 app.use(express.json());
-
-app.get('/', (request, response) =>{
-    // const users = [
-    //     {name: 'Pablo',  age: 25},
-    //     {name: 'Vini',  age: 21}
-    // ];
-
-    return response.json({ message: 'Hello World'});
-});
+app.use(routes);
+// app.get('/', (request, response) =>{
+//     return response.json({ message: 'Hello World'});
+// });
 
 app.listen(3333);
