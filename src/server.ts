@@ -1,6 +1,6 @@
 import express from 'express';
 import routes from './routes';
-
+import cors from 'cors';
 const app = express();
 //http:localhost:3333   para acessar a aplicação
 //No insominia colocar o caminho para acessar e usar o post
@@ -13,7 +13,7 @@ const app = express();
 //Corpo (Request body): Dados para criacao ou atualizacao de um registro
 // Route Params: Indentificar qual recurso eu quero atualizar ou deletar 
 // Query parms: paginação, filtros, ordenação
-
+app.use(cors());
 app.use(express.json());
 app.use(routes);
 // app.get('/', (request, response) =>{
