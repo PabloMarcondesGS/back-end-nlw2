@@ -1,6 +1,6 @@
 # Funcionalidades
 
-## Comexões
+## Conexões
 
 - Rota para listar o total de aulas
 - Rota para nova conexão
